@@ -37,7 +37,6 @@ switch method
             A_new = full(adjacency(G_new,"weighted"));
             max_dif_distance_value =  max(max(distances(G_new)-D));
             [maxrow,maxcol] = find((distances(G_new)-D) == max_dif_distance_value,1);
-    %         decend_step = sum(sum(tril(abs(distances(G_new)-tril(D)))));
         end    
         G1 = graph(A_new);
         S1 = distances(G1);
