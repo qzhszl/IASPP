@@ -20,7 +20,6 @@ if nargin == 1
 end
 
 switch method
-    % Brute force O(n^2)
     case 'classic'
         G_D = graph(D,'lower');
 
@@ -44,7 +43,6 @@ switch method
         S1 = distances(G1);
         A_new = remove_triangle(A_new,S1);
         
-    % KDTree Search O(nlogn)
     case 'advanced'
         A_new = D;
         N = size(A_new,1);
